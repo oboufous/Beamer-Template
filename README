@@ -1,0 +1,24 @@
+# 
+The goal is to copy the INRIA theme.
+
+# 
+see the TODO file, for the todo list
+see the KNOWN_ISSUES file for the list of known issues.
+
+# What is working 
+- compiling the example & viewing it :
+$$  make 
+
+# Ressources
+
+- INRIA theme description: http://intranet.inria.fr/disc/charte/besoins.html#2
+- INRIA charte : 110616_inria_charte_identitaire.pdf (Please contact the comm service to get it).
+
+- External Documentation:
+ the beamer guide, the tikz one
+
+
+
+
+
+

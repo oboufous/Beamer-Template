@@ -1,0 +1,13 @@
+Latex letter class for INRIA
+
+Usage:
+Use the provided file letter.tex as a model by filling in your data
+(if you use accented letters, store the file as utf-8, not as latin-1).
+
+The file compiles with pdflatex and xelatex.
+With pdflatex, the standard latex fonts are used for the address in the footer.
+With xelatex, install the provided fonts of the Exo family into the standard
+font location of your system (for instance under GNU/Linux, by simply copying
+them to /usr/local/share/fonts); these are used as a replacement for the
+proprietary Neo Sans fonts.
+

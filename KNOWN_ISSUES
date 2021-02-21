@@ -1,0 +1,39 @@
+There are several limitation while trying to copy the official INRIA theme.
+
+Rationale: In this document we refers as official document the file "110616_inria_charte_identitaire.pdf".
+
+The major issue is that the official document refers to the powerpoint template as specification (p.41).
+This imply that there is no explicit specifications of sizes, etc..
+
+# postscript
+- the postscript version do not support transparency in figures.
+  We need to find which parts misunderstand EPS 3.0.
+
+# fonts
+- We cannot use/have the fonts "univers" nor "Neo Sans". 
+- The text sizes are bigger in beamer than in the template.
+
+# Text/figures Positioning
+- the official document do not really specify them.
+  What is really difficult is to know if sizes are relative to papersize, to fontsize, or fixed.
+- the powerpoint template do not follow the official positioning (based on the papersize).
+  So we do not have a good reference there.
+
+# colors
+- the official document do not specify the RGB profile (if RGB refers to sRGB or Adobe RGB or else).
+  Since it is convenient for us, we consider it refers sRGB.
+- the official document do not specify the corresponding RGB values of CMYK colors on p.15.
+  The software "gcolor2" seems to be able to convert them (it matches the conversions on p.14 colors).
+  See also figures-inria/custom/colors-gradation.txt.
+
+# Figures
+- We had to "redo" several figures in order to have transparency. They are in "figures-inria/custom/"
+- In the official document, fading should take 25% of the paper height, but it does seems take more 
+  (yellowish color above the 25% line).
+
+# framesubtitle
+- the official document do not provide frame subtitle. So we invented one.
+
+# table of contents
+- it seems that beamer do not distinguish text color and enumeration color in toc.
+  Thus it will be hard to use the red enumeration color in toc.

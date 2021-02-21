@@ -1,0 +1,58 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Handle the page between the sections 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO : nearly all
+% DONE : 
+% - have a basic page, with number and section title
+%   (the differents sizes + anchor are not set) 
+\AtBeginSection[]{
+%% Add themed 
+  \setbeamertemplate{background canvas}[vertical shading][top=rouge1,bottom=orange2,middle=rouge1]
+  \setbeamercolor{toto}{fg=gris,bg=blanc}
+  \setbeamertemplate{footline}
+  {
+    \begin{beamercolorbox}[wd=1\paperwidth,ht=15.5pt]{toto}
+      \hspace{3mm}	\includegraphics[width=18mm]{figures-inria/official/template-imported/logobasorange}
+      \hspace{1.5cm}  
+      \raisebox{2.5ex}
+      {EMETTEUR - NOM DE LA PRESENTATION}\hfill 
+      \raisebox{2.5ex}
+      {\today - \insertframenumber \hspace{5mm} \null }
+    \end{beamercolorbox}
+  }
+
+  \begin{frame}<beamer>
+
+    \resizebox{2.0cm}{!}{\textcolor{white}{\arabic{section}}}\\[1pt]
+    \hspace*{0.5cm} { \textcolor{white}{\Huge \insertsectionhead } }
+    
+    \end{frame}
+
+%%% Reset the colors & footline
+  \setbeamertemplate{background canvas}[vertical shading][top=blanc,bottom=blanc,middle=blanc]
+  \setbeamercolor{toto}{fg=blanc,bg=rouge1}
+  \setbeamertemplate{footline}
+  {
+    \begin{beamercolorbox}[wd=1\paperwidth,ht=15.5pt]{toto}
+      \hspace{3mm}	\includegraphics[width=18mm]{figures-inria/official/template-imported/logobastrans}
+      \hspace{1.5cm}  
+      \raisebox{2.5ex}
+      {EMETTEUR - NOM DE LA PRESENTATION}\hfill 
+      \raisebox{2.5ex}
+      {\today - \insertframenumber \hspace{5mm} \null }
+    \end{beamercolorbox}
+  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a fall back solution
+%
+  % \begin{frame}<beamer>
+  %   \frametitle{\textcolor{gris}{Outline}}
+  %   \begin{textblock*}{\textwidth}(22mm,15mm) %(13mm,50mm)
+  %     % \tableofcontents[current,currentsubsection]
+  %     {\small \tableofcontents[current,hideothersubsections]}
+  %   \end{textblock*}
+  % \end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
